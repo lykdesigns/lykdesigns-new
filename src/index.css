@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Manrope", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-canvas: #0D0D0D;
+  --color-surface: #141414;
+  --color-surface-hover: #151515;
+  --color-surface-active: #111111;
+  --color-border: #222222;
+  --color-technical: #777777;
+  --color-paper: #F2F0EA;
+  --color-orange: #FF5A1F;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: #0D0D0D;
+  color: #F2F0EA;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+}
+
+.font-display {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.font-body {
+  font-family: "Manrope", sans-serif;
+}
+
+.font-mono {
+  font-family: "JetBrains Mono", monospace;
+}
+
+/* Sophisticated Dark Blueprint Grids */
+.blueprint-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(119, 119, 119, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(119, 119, 119, 0.05) 1px, transparent 1px);
+}
+
+.blueprint-dots {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle at 2px 2px, rgba(119, 119, 119, 0.1) 1px, transparent 0);
+}
+
+.blueprint-combined {
+  background-size: 40px 40px, 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(119, 119, 119, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(119, 119, 119, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 2px 2px, rgba(119, 119, 119, 0.1) 1px, transparent 0);
+}
+
+.blueprint-grid-dense {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(119, 119, 119, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(119, 119, 119, 0.07) 1px, transparent 1px);
+}
+
+.blueprint-grid-orange {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 90, 31, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 90, 31, 0.08) 1px, transparent 1px);
+}
+
+/* Typography Text Stroke */
+.text-stroke-paper {
+  -webkit-text-stroke: 1px #F2F0EA;
+}
+
+.text-stroke-paper-thick {
+  -webkit-text-stroke: 2px #F2F0EA;
+}
+
+.text-stroke-orange {
+  -webkit-text-stroke: 1px #FF5A1F;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0D0D0D;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 1px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FF5A1F;
+}
+
+/* Precision Hairlines */
+.border-technical {
+  border-color: #222222;
+}
+
+.border-technical-dark {
+  border-color: #1A1A1A;
+}
+
+/* Smooth Glow */
+.orange-glow {
+  box-shadow: 0 0 30px rgba(255, 90, 31, 0.25);
+}
+
+.orange-glow-sm {
+  box-shadow: 0 0 15px rgba(255, 90, 31, 0.35);
+}
+
+/* Custom Precision Cursor styles on desktop fine pointer devices */
+@media (pointer: fine) {
+  body, button, a, [role="button"], input, textarea, select {
+    cursor: none !important;
+  }
+}
